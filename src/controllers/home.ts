@@ -1,4 +1,4 @@
-import { Request, Response } from "express";
+import { Request, Response } from 'express';
 
 /**
  * GET /
@@ -6,6 +6,6 @@ import { Request, Response } from "express";
  */
 export let index = (req: Request, res: Response) => {
   res.json({
-    name: "app"
+    name: 'app'
   });
 };

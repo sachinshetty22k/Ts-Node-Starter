@@ -1,12 +1,12 @@
-import * as express from "express";
-import * as bodyParser from "body-parser";
-import * as logger from "morgan";
-import * as mongoose from "mongoose";
+import * as express from 'express';
+import * as bodyParser from 'body-parser';
+import * as logger from 'morgan';
+import * as mongoose from 'mongoose';
 
 // Load environment variables from .env file, where API keys and passwords are configured
 
 // Controllers (route handlers)
-import * as homeController from "./controllers/home";
+import * as homeController from './controllers/home';
 
 // API keys and Passport configuration
 
@@ -24,6 +24,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /**
  * Primary app routes.
  */
-app.get("/", homeController.index);
+app.get('/', homeController.index);
 
-export = app;
+export default app;

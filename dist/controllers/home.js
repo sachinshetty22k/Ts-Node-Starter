@@ -6,7 +6,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  */
 exports.index = (req, res) => {
     res.json({
-        name: "app"
+        name: 'app'
     });
 };
 //# sourceMappingURL=home.js.map

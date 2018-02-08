@@ -1,4 +1,5 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
 const express = require("express");
 const bodyParser = require("body-parser");
 // Load environment variables from .env file, where API keys and passwords are configured
@@ -14,6 +15,6 @@ app.use(bodyParser.urlencoded({ extended: true }));
 /**
  * Primary app routes.
  */
-app.get("/", homeController.index);
-module.exports = app;
+app.get('/', homeController.index);
+exports.default = app;
 //# sourceMappingURL=app.js.map

@@ -11,7 +11,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 const express_1 = require("express");
 const home_1 = require("../controllers/home");
 const router = express_1.Router();
-router.get("/", (req, res) => __awaiter(this, void 0, void 0, function* () {
+router.get('/', (req, res) => __awaiter(this, void 0, void 0, function* () {
     yield home_1.index(req, res);
 }));
 exports.default = home_1.index;

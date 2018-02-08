@@ -12,9 +12,9 @@ const mongoose = require("mongoose");
 const config_1 = require("./config");
 function connectToDB() {
     return __awaiter(this, void 0, void 0, function* () {
-        console.log("Connecting to DB.");
+        console.log('Connecting to DB.');
         yield mongoose.connect(config_1.config.mongoDBURI);
-        console.log("Connected to DB.");
+        console.log('Connected to DB.');
     });
 }
 exports.connectToDB = connectToDB;
