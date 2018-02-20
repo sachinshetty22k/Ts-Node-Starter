@@ -1,7 +1,8 @@
 {
     "recommendations": [
         "eg2.tslint",
-        "ms-azuretools.vscode-cosmosdb",
-        "streetsidesoftware.code-spell-checker"
+        "rbbit.typescript-hero",
+        "streetsidesoftware.code-spell-checker",
+        "esbenp.prettier-vscode"
     ]
 }

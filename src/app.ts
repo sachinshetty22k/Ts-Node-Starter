@@ -1,29 +1,23 @@
-import * as express from 'express';
 import * as bodyParser from 'body-parser';
-import * as logger from 'morgan';
-import * as mongoose from 'mongoose';
+import * as express from 'express';
 
-// Load environment variables from .env file, where API keys and passwords are configured
-
-// Controllers (route handlers)
-import * as homeController from './controllers/home';
-
-// API keys and Passport configuration
+import { httpLogger } from './config/http.logger';
+import { logger } from './config/logger';
+import indexRouter from './routes/index.route';
 
 // Create Express server
 const app = express();
 
-// Connect to MongoDB
-
-
 // Express configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
-
+app.use(httpLogger);
 
 /**
- * Primary app routes.
+ * App routes.
  */
-app.get('/', homeController.index);
+app.use('/', indexRouter);
+
+logger.info('Appjs', 'Setting up.');
 
 export default app;

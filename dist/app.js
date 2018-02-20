@@ -1,10 +1,12 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-const express = require("express");
 const bodyParser = require("body-parser");
-// Load environment variables from .env file, where API keys and passwords are configured
+const express = require("express");
+const debug_logger_1 = require("./config/debug.logger");
+const http_logger_1 = require("./config/http.logger");
+const logger_1 = require("./config/logger");
+const homeController = require("./controllers/home.controller");
 // Controllers (route handlers)
-const homeController = require("./controllers/home");
 // API keys and Passport configuration
 // Create Express server
 const app = express();
@@ -12,6 +14,10 @@ const app = express();
 // Express configuration
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
+app.use(http_logger_1.httpLogger);
+app.use(debug_logger_1.log4jHttpLog);
+logger_1.logger.info('yows', { name: 'sachin', a: 'asdf' });
+logger_1.logger.error('error');
 /**
  * Primary app routes.
  */

@@ -14,39 +14,43 @@ const router = express_1.Router();
 /**
  * @swagger
  *  tags:
- *  - name: "pet"
- *    description: "Everything about your Pets"
+ *  - name: "user"
+ *    description: "Operations about user"
  *    externalDocs:
- *    - description: "Find out more"
+ *    - description: "Find out more about our store"
  *    url: "http://swagger.io"
- *  - name: "store"
- *    description: "Access to Petstore orders"
  */
 /**
  * @swagger
- *  patch:
- *    tags:
- *    - Account-Routers
- *    description: for updating user detail
- *    operationId: for the URL
- *    produces:
- *    - application/json
- *    parameters:
- *    - name: id
- *      in: path
- *      description: _id of an authenticated user
- *      required: true
- *      type: string
- *    - name: body parameters for updating
- *      in: body
- *      description: Parameters to update(username,credential,accesstoken cant be upadated)
- *      required: false
- *    responses:
- *      '200':
- *        description: updated user object
+ * "/associated-accounts/":
+ *      put:
+ *        tags:
+ *        - associated-accounts-Routers
+ *        description: Update associated account
+ *        operationId:
+ *        produces:
+ *        - application/json
+ *        parameters:
+ *        - name: id
+ *          in: path
+ *          description: user id
+ *          required: true
+ *        - name: type
+ *          in: path
+ *          description: accountype to be updated
+ *          required: true
+ *        - name: Parameters
+ *          in: body
+ *          description: Parameters to update an associated account
+ *          required: true
+ *          schema:
+ *            "$ref": "#/definitions/associateAccounUpdate"
+ *        responses:
+ *          '200':
+ *            description: create response
  */
 router.get('/', (req, res) => __awaiter(this, void 0, void 0, function* () {
     yield home_controller_1.index(req, res);
 }));
 exports.default = home_controller_1.index;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=user.js.map

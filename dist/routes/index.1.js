@@ -21,6 +21,11 @@ const router = express_1.Router();
  *    url: "http://swagger.io"
  *  - name: "store"
  *    description: "Access to Petstore orders"
+ *  - name: "user"
+ *    description: "Operations about user"
+ *    externalDocs:
+ *    - description: "Find out more about our store"
+ *    url: "http://swagger.io"
  */
 /**
  * @swagger
@@ -49,4 +54,4 @@ router.get('/', (req, res) => __awaiter(this, void 0, void 0, function* () {
     yield home_controller_1.index(req, res);
 }));
 exports.default = home_controller_1.index;
-//# sourceMappingURL=index.js.map
+//# sourceMappingURL=index.1.js.map
